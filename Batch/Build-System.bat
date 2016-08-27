@@ -193,6 +193,17 @@ GOTO:EOF
 	del %USERPROFILE%\Downloads\adblockplusie.exe
 GOTO:EOF
 
+:menu_16		Auto-build a new system
+	cls
+	echo.
+	echo. Which version of Windows do you wish to build on to?
+	for /f "tokens=1,2,* delims=_ " %%A in ('"findstr /b /c:":menu-auto_" "%~f0""') do (
+		echo.  %%B  %%C)
+	set choice=
+	echo.&set /p choice=. Make a choice or hit ENTER to quit: ||GOTO:EOF
+	echo.&call:menu-ninite_%choice%
+GOTO:EOF
+
 :menu-ninite_1		Windows 7
 	cls
 	echo.
@@ -229,7 +240,7 @@ GOTO:EOF
 	del %USERPROFILE%\Downloads\Ninite10.exe
 GOTO:EOF
 
-:menu-adblockers_1		uBlock for Chrome (Need to test)
+:menu-adblockers_1		uBlock for Chrome
 	cls
 	echo.
 	echo. Opening uBlock for Chrome download page in another window...
@@ -274,4 +285,32 @@ GOTO:EOF
 	echo.
 	echo. Opening Adblock Plus for Edge download page in another window...
 	start ms-windows-store://pdp/?ProductId=9nblggh4r9nz
+GOTO:EOF
+
+:menu-auto_1		Windows 7
+
+GOTO:EOF
+
+:auto-build-loop-windows-7
+	ninite7
+	CCleaner
+	avast (y,n)
+	ESET (y,n)
+	JRT
+	Defrag (y,n)
+	flash
+	adobe
+	ublock firefox
+	ublock chrome
+	adblock ie
+	simple Help
+	never 10
+	remove temporary files
+	don't forget to disable aero, and disable password requirements manually (ok)
+GOTO:auto-build-loop-windows-7
+
+:menu-auto_2		Windows 8 or 8.1
+GOTO:EOF
+
+:menu-auto_3		Windows 10
 GOTO:EOF
