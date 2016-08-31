@@ -234,15 +234,15 @@ GOTO:EOF
 GOTO:EOF
 
 :menu-adblockers_5		Adblock Plus for Internet Explorer
-	cls
-	echo.
-	echo. Initializing Adblock Plus for Internet Explorer download.
+	CLS
+	ECHO.
+	ECHO. Initializing Adblock Plus for Internet Explorer download.
 	bitsadmin.exe /transfer "Adblock Plus for Internet Explorer Installer" https://update.adblockplus.org/latest/adblockplusie.exe %USERPROFILE%\Downloads\adblockplusie.exe
-	echo. The Adblock Plus for Internet Explorer Installer is opening in another window...
+	ECHO. The Adblock Plus for Internet Explorer Installer is opening in another window...
 	%USERPROFILE%\Downloads\adblockplusie.exe
-	echo. The Adblock Plus for Internet Explorer installation is complete.
-	echo. Deleting temporary Adblock Plus for Internet Explorer installation files...
-	del %USERPROFILE%\Downloads\adblockplusie.exe
+	ECHO. The Adblock Plus for Internet Explorer installation is complete.
+	ECHO. Deleting temporary Adblock Plus for Internet Explorer installation files...
+	DEL %USERPROFILE%\Downloads\adblockplusie.exe
 GOTO:EOF
 
 :menu-adblockers_6		Adblock Plus for Edge (Windows 10 1607 or newer only)
@@ -253,63 +253,63 @@ GOTO:EOF
 GOTO:EOF
 
 :menu_9		Install Spybot Search and Destroy
-	cls
-	echo.
-	echo. Initializing Spybot Search and Destroy download.
+	CLS
+	ECHO.
+	ECHO. Initializing Spybot Search and Destroy download.
 	bitsadmin.exe /transfer "Spybot Search and Destroy Installer" http://updates3.safer-networking.org/spybot1/spybot-2.4.exe %USERPROFILE%\Downloads\spybot-2.4.exe
-	echo. The Spybot Search and Destroy Installer is opening in another window...
+	ECHO. The Spybot Search and Destroy Installer is opening in another window...
 	%USERPROFILE%\Downloads\spybot-2.4.exe
-	echo. The Spybot Search and Destroy installation is complete.
-	echo. Deleting temporary Spybot Search and Destroy installation files...
-	del %USERPROFILE%\Downloads\spybot-2.4.exe
+	ECHO. The Spybot Search and Destroy installation is complete.
+	ECHO. Deleting temporary Spybot Search and Destroy installation files...
+	DEL %USERPROFILE%\Downloads\spybot-2.4.exe
 GOTO:EOF
 
 :menu_10		Install Avast (optional)
-	cls
-	echo.
-	echo. Initializing Avast download.
+	CLS
+	ECHO.
+	ECHO. Initializing Avast download.
 	bitsadmin.exe /transfer "Avast Installer" http://software-files-a.cnet.com/s/software/15/53/66/42/avast_free_antivirus_setup_online_cnet_2.exe?token=1471352498_065a223c0adb5faeceda172996907eda&fileName=avast_free_antivirus_setup_online_cnet_2.exe %USERPROFILE%\Downloads\avast_free_antivirus_setup_online_cnet_2.exe
-	echo. The Avast Installer is opening in another window...
+	ECHO. The Avast Installer is opening in another window...
 	%USERPROFILE%\Downloads\avast_free_antivirus_setup_online_cnet_2.exe
-	echo. The Avast installation is complete.
-	echo. Deleting temporary Avast installation files...
-	del %USERPROFILE%\Downloads\avast_free_antivirus_setup_online_cnet_2.exe
+	ECHO. The Avast installation is complete.
+	ECHO. Deleting temporary Avast installation files...
+	DEL %USERPROFILE%\Downloads\avast_free_antivirus_setup_online_cnet_2.exe
 GOTO:EOF
 
 :menu_11		Install ESET NOD32 Anti-Virus (optional)
-	cls
-	echo.
-	echo. Initializing ESET NOD32 Anti-Virus download.
+	CLS
+	ECHO.
+	ECHO. Initializing ESET NOD32 Anti-Virus download.
 	bitsadmin.exe /transfer "ESET NOD32 Anti-Virus Installer" http://download.eset.com/special/live-installer/us/eset_nod32_antivirus_live_installer.exe %USERPROFILE%\Downloads\eset_nod32_antivirus_live_installer.exe
-	echo. The ESET NOD32 Anti-Virus Installer is opening in another window...
+	ECHO. The ESET NOD32 Anti-Virus Installer is opening in another window...
 	%USERPROFILE%\Downloads\eset_nod32_antivirus_live_installer.exe
-	echo. The ESET NOD32 Anti-Virus installation is complete.
-	echo. Deleting temporary ESET NOD32 Anti-Virus installation files...
-	del %USERPROFILE%\Downloads\eset_nod32_antivirus_live_installer.exe
+	ECHO. The ESET NOD32 Anti-Virus installation is complete.
+	ECHO. Deleting temporary ESET NOD32 Anti-Virus installation files...
+	DEL %USERPROFILE%\Downloads\eset_nod32_antivirus_live_installer.exe
 GOTO:EOF
 
 :menu_12		Install Auslogics Disk Defrag (HDD only)
-	cls
-	echo.
-	echo. Initializing Auslogics Disk Defrag download.
+	CLS
+	ECHO.
+	ECHO. Initializing Auslogics Disk Defrag download.
 	bitsadmin.exe /transfer "Auslogics Disk Defrag Installer" http://static.auslogics.com/en/disk-defrag/disk-defrag-setup.exe %USERPROFILE%\Downloads\disk-defrag-setup.exe
-	echo. The Auslogics Disk Defrag Installer is opening in another window...
+	ECHO. The Auslogics Disk Defrag Installer is opening in another window...
 	%USERPROFILE%\Downloads\disk-defrag-setup.exe
-	echo. The Auslogics Disk Defrag installation is complete.
-	echo. Deleting temporary Auslogics Disk Defrag installation files...
-	del %USERPROFILE%\Downloads\disk-defrag-setup.exe
+	ECHO. The Auslogics Disk Defrag installation is complete.
+	ECHO. Deleting temporary Auslogics Disk Defrag installation files...
+	DEL %USERPROFILE%\Downloads\disk-defrag-setup.exe
 GOTO:EOF
 
 :menu_13		Install Never10 (Windows 7 and 8 only)
-	cls
-	echo.
-	echo. Initializing Never10 download.
+	CLS
+	ECHO.
+	ECHO. Initializing Never10 download.
 	bitsadmin.exe /transfer "Never10 Installer" https://www.grc.com/files/never10.exe %USERPROFILE%\Downloads\never10.exe
-	echo. The Never10 Installer is opening in another window...
+	ECHO. The Never10 Installer is opening in another window...
 	%USERPROFILE%\Downloads\never10.exe
-	echo. The Never10 installation is complete.
-	echo. Deleting temporary Never10 installation files...
-	del %USERPROFILE%\Downloads\never10.exe
+	ECHO. The Never10 installation is complete.
+	ECHO. Deleting temporary Never10 installation files...
+	DEL %USERPROFILE%\Downloads\never10.exe
 GOTO:EOF
 
 :menu_14		Disable password requirement at boot
@@ -322,7 +322,7 @@ GOTO:EOF
 :menu_15		Disable password requirement on wake
 	CLS
 	ECHO.
-	echo. The Advanced Power Settings Control Panel is opening in another window...
+	ECHO. The Advanced Power Settings Control Panel is opening in another window...
 	%WINDIR%\system32\control.exe powercfg.cpl,,3
 GOTO:EOF
 
