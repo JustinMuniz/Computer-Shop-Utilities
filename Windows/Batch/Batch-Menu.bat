@@ -1,16 +1,11 @@
 @ECHO OFF
-
-REM menu
-REM build checklist
-REM run maintenance
-REM windows shortcuts
+SETLOCAL
 
 :menuLOOP
 	cls
 	echo.
-	echo.===         H.E.L.P.e.R.        ================================
-	echo.===         Justin Muniz        ================================
-	echo.===          2016-08-17         ================================
+	echo.================    Windows System Helper Scripts    ================
+	ECHO.================        (c) 2016 Justin Muniz        ================
 	echo.
 	echo.
 	for /f "tokens=1,2,* delims=_ " %%A in ('"findstr /b /c:":menu_" "%~f0""') do (
@@ -21,7 +16,7 @@ REM windows shortcuts
 GOTO:menuLOOP
 
 :menu_1		Installation / Configuration
-	start BuildChecklist.bat
+	start Build-Scripts\Build-Menu.bat
 GOTO:EOF
 
 :menu_2		System Maintenance
