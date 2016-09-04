@@ -55,9 +55,6 @@ GOTO:menu-draw-loop
 GOTO:EOF
 
 :menu-option_1
-	IF "%option8%"=="[X]" (
-		CALL Install-Ad-Blockers.bat
-	)
 	IF "%option2%"=="[X]" (
 		CALL Install-Ninite.bat
 	)
@@ -87,6 +84,9 @@ GOTO:EOF
 	)
 	IF "%option13%"=="[X]" (
 		CALL Install-Never10.bat
+	)
+	IF "%option8%"=="[X]" (
+		CALL Install-Ad-Blockers.bat
 	)
 	IF "%option3%"=="[X]" (
 		CALL Install-Simple-Help.bat
