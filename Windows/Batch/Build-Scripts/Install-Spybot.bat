@@ -9,6 +9,6 @@ ECHO. The Spybot Search and Destroy Installer is opening in another window...
 %USERPROFILE%\Downloads\spybot.exe
 ECHO. The Spybot Search and Destroy installation is complete.
 ECHO. Deleting temporary Spybot Search and Destroy installation files...
-DEL %USERPROFILE%\Downloads\spybot.exe
+DEL %USERPROFILE%\Downloads\spybot.exe /silent .
 
 GOTO:EOF
