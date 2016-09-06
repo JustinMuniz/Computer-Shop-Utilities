@@ -2,6 +2,7 @@
 SETLOCAL ENABLEDELAYEDEXPANSION
 
 :: Replace Ninite meta-installers with individual package installers
+:: Verify silent installs, and retry failed installs
 :: Installers to add?
 ::   Classic Start
 :: Hide menu options not for that version of windows
