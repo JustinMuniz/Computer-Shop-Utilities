@@ -11,7 +11,6 @@ SETLOCAL ENABLEDELAYEDEXPANSION
 ::   Never10
 ::   Disable Aero
 :: Automate installations and configurations
-::   Install Junkware Removal Tool
 ::   uBlock for Chrome
 ::   Adblock Plus for Chrome
 ::   uBlock for Firefox
@@ -111,11 +110,11 @@ GOTO:EOF
 	IF "%option5%"=="[X]" (
 		CALL Install-Acrobat-Reader.bat
 	)
-	IF "%option8%"=="[X]" (
-		CALL Install-Ad-Blockers.bat
-	)
 	IF "%option7%"=="[X]" (
 		CALL Install-JRT.bat
+	)
+	IF "%option8%"=="[X]" (
+		CALL Install-Ad-Blockers.bat
 	)
 	IF "%option11%"=="[X]" (
 		CALL Install-ESET.bat
