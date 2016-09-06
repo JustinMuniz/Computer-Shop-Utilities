@@ -10,10 +10,8 @@ SETLOCAL ENABLEDELAYEDEXPANSION
 ::   Never10
 ::   Disable Aero
 :: Automate installations and configurations
-::   Simple Help
 ::   Flash Player
 ::   Acrobat Reader
-::   CCleaner
 ::   Install Junkware Removal Tool
 ::   uBlock for Chrome
 ::   Adblock Plus for Chrome
@@ -102,6 +100,12 @@ GOTO:EOF
 	IF "%option10%"=="[X]" (
 		CALL Install-Avast.bat
 	)
+	IF "%option6%"=="[X]" (
+		CALL Insatll-CCleaner.bat
+	)
+	IF "%option3%"=="[X]" (
+		CALL Install-Simple-Help.bat
+	)
 	IF "%option8%"=="[X]" (
 		CALL Install-Ad-Blockers.bat
 	)
@@ -110,9 +114,6 @@ GOTO:EOF
 	)
 	IF "%option5%"=="[X]" (
 		CALL Install-Acrobat-Reader.bat
-	)
-	IF "%option6%"=="[X]" (
-		CALL Insatll-CCleaner.bat
 	)
 	IF "%option7%"=="[X]" (
 		CALL Install-JRT.bat
@@ -125,9 +126,6 @@ GOTO:EOF
 	)
 	IF "%option13%"=="[X]" (
 		CALL Install-Never10.bat
-	)
-	IF "%option3%"=="[X]" (
-		CALL Install-Simple-Help.bat
 	)
 	IF "%option14%"=="[X]" (
 		CALL Disable-Boot-Password.bat
