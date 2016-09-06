@@ -3,6 +3,7 @@ SETLOCAL ENABLEDELAYEDEXPANSION
 
 :: Replace Ninite meta-installers with individual package installers
 :: Verify silent installs, and retry failed installs
+:: Flash and Reader need a installation that works with automated queue
 :: Installers to add?
 ::   Classic Start
 :: Hide menu options not for that version of windows
@@ -10,8 +11,6 @@ SETLOCAL ENABLEDELAYEDEXPANSION
 ::   Never10
 ::   Disable Aero
 :: Automate installations and configurations
-::   Flash Player
-::   Acrobat Reader
 ::   Install Junkware Removal Tool
 ::   uBlock for Chrome
 ::   Adblock Plus for Chrome
@@ -106,14 +105,14 @@ GOTO:EOF
 	IF "%option3%"=="[X]" (
 		CALL Install-Simple-Help.bat
 	)
-	IF "%option8%"=="[X]" (
-		CALL Install-Ad-Blockers.bat
-	)
 	IF "%option4%"=="[X]" (
 		CALL Install-Flash-Player.bat
 	)
 	IF "%option5%"=="[X]" (
 		CALL Install-Acrobat-Reader.bat
+	)
+	IF "%option8%"=="[X]" (
+		CALL Install-Ad-Blockers.bat
 	)
 	IF "%option7%"=="[X]" (
 		CALL Install-JRT.bat
