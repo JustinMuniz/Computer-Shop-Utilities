@@ -1,9 +1,30 @@
 @ECHO OFF
-SETLOCAL
+SETLOCAL ENABLEDELAYEDEXPANSION
 
-:: optomize the menu option toggle algorithm
-:: hide menu options not for that version of windows 
-:: automate installations and configurations
+:: Replace Ninite meta-installers with individual package installers
+:: Installers to add?
+::   Classic Start
+:: Hide menu options not for that version of windows
+::   Adblock Plus for Edge
+::   Never10
+::   Disable Aero
+:: Automate installations and configurations
+::   Simple Help
+::   Flash Player
+::   Acrobat Reader
+::   CCleaner
+::   Install Junkware Removal Tool
+::   uBlock for Chrome
+::   Adblock Plus for Chrome
+::   uBlock for Firefox
+::   Adblock Plus for Firefox
+::   Adblock Plus for Internet Explorer
+::   Adblock Plus for Edge
+::   ESET NOD32 Anti-Virus
+::   Never10
+::   Disable password requirement at boot
+::   Disable password requirement on wake
+::   Disable Aero
 
 CALL:reset-menu-options
 
@@ -32,8 +53,24 @@ CALL:reset-menu-options
 	ECHO.  16.        %option16% Disable Aero (Windows Vista, 7, and 8 only)
 	ECHO.  17.            Remove temporary installation files
 	SET choice=
+	SET chosen-option=
 	ECHO.&SET /P choice=Enter a number to toggle it's option or hit ENTER to quit [1-17]: ||GOTO:EOF
-	ECHO.&CALL:menu-option_%choice%
+	IF "%choice%"=="1" (
+		ECHO.&CALL:menu-option_%choice%
+	) ELSE (
+		IF "%choice_number%"=="17" (
+			ECHO.&CALL:menu-option_%choice%
+		) ELSE (
+			FOR /F %%A IN ("option%choice%") DO (
+				SET chosen-option=!%%A!
+				IF "!%%A!"=="[ ]" (
+					SET option!choice!=[X]
+				) ELSE (
+					SET option!choice!=[ ]
+				)
+			)
+		)	
+	)
 GOTO:menu-draw-loop
 
 :reset-menu-options
@@ -58,6 +95,15 @@ GOTO:EOF
 	IF "%option2%"=="[X]" (
 		CALL Install-Ninite.bat
 	)
+	IF "%option9%"=="[X]" (
+		CALL Install-Spybot.bat
+	)
+	IF "%option10%"=="[X]" (
+		CALL Install-Avast.bat
+	)
+	IF "%option8%"=="[X]" (
+		CALL Install-Ad-Blockers.bat
+	)
 	IF "%option4%"=="[X]" (
 		CALL Install-Flash-Player.bat
 	)
@@ -70,12 +116,6 @@ GOTO:EOF
 	IF "%option7%"=="[X]" (
 		CALL Install-JRT.bat
 	)
-	IF "%option9%"=="[X]" (
-		CALL Install-Spybot.bat
-	)
-	IF "%option10%"=="[X]" (
-		CALL Install-Avast.bat
-	)
 	IF "%option11%"=="[X]" (
 		CALL Install-ESET.bat
 	)
@@ -84,9 +124,6 @@ GOTO:EOF
 	)
 	IF "%option13%"=="[X]" (
 		CALL Install-Never10.bat
-	)
-	IF "%option8%"=="[X]" (
-		CALL Install-Ad-Blockers.bat
 	)
 	IF "%option3%"=="[X]" (
 		CALL Install-Simple-Help.bat
@@ -101,126 +138,6 @@ GOTO:EOF
 		CALL Disable-Aero.bat
 	)
 	CALL:reset-menu-options
-GOTO:EOF
-
-:menu-option_2
-	IF "%option2%"=="[ ]" (
-		SET option2=[X]
-	) ELSE (
-		SET option2=[ ]
-	)
-GOTO:EOF
-
-:menu-option_3
-	IF "%option3%"=="[ ]" (
-		SET option3=[X]
-	) ELSE (
-		SET option3=[ ]
-	)
-GOTO:EOF
-
-:menu-option_4
-	IF "%option4%"=="[ ]" (
-		SET option4=[X]
-	) ELSE (
-		SET option4=[ ]
-	)
-GOTO:EOF
-
-:menu-option_5
-	IF "%option5%"=="[ ]" (
-		SET option5=[X]
-	) ELSE (
-		SET option5=[ ]
-	)
-GOTO:EOF
-
-:menu-option_6
-	IF "%option6%"=="[ ]" (
-		SET option6=[X]
-	) ELSE (
-		SET option6=[ ]
-	)
-GOTO:EOF
-
-:menu-option_7
-	IF "%option7%"=="[ ]" (
-		SET option7=[X]
-	) ELSE (
-		SET option7=[ ]
-	)
-GOTO:EOF
-
-:menu-option_8
-	IF "%option8%"=="[ ]" (
-		SET option8=[X]
-	) ELSE (
-		SET option8=[ ]
-	)
-GOTO:EOF
-
-:menu-option_9
-	IF "%option9%"=="[ ]" (
-		SET option9=[X]
-	) ELSE (
-		SET option9=[ ]
-	)
-GOTO:EOF
-
-:menu-option_10
-	IF "%option10%"=="[ ]" (
-		SET option10=[X]
-	) ELSE (
-		SET option10=[ ]
-	)
-GOTO:EOF
-
-:menu-option_11
-	IF "%option11%"=="[ ]" (
-		SET option11=[X]
-	) ELSE (
-		SET option11=[ ]
-	)
-GOTO:EOF
-
-:menu-option_12
-	IF "%option12%"=="[ ]" (
-		SET option12=[X]
-	) ELSE (
-		SET option12=[ ]
-	)
-GOTO:EOF
-
-:menu-option_13
-	IF "%option13%"=="[ ]" (
-		SET option13=[X]
-	) ELSE (
-		SET option13=[ ]
-	)
-GOTO:EOF
-
-:menu-option_14
-	IF "%option14%"=="[ ]" (
-		SET option14=[X]
-	) ELSE (
-		SET option14=[ ]
-	)
-GOTO:EOF
-
-:menu-option_15
-	IF "%option15%"=="[ ]" (
-		SET option15=[X]
-	) ELSE (
-		SET option15=[ ]
-	)
-GOTO:EOF
-
-:menu-option_16
-	IF "%option16%"=="[ ]" (
-		SET option16=[X]
-	) ELSE (
-		SET option16=[ ]
-	)
 GOTO:EOF
 
 :menu-option_17
