@@ -1,6 +1,7 @@
 @ECHO OFF
 SETLOCAL ENABLEDELAYEDEXPANSION
 
+:: Add copyright and description headers to all source files
 :: Replace Ninite meta-installers with individual package installers
 :: Verify silent installs, and retry failed installs
 :: Flash and Reader need a installation that works with automated queue
