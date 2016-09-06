@@ -15,7 +15,7 @@ if "%major-version%" == "10" (
 	%USERPROFILE%\Downloads\Ninite10.exe
 	ECHO. The Ninite for Windows 10 installation is complete.
 	ECHO. Deleting temporary Ninite for Windows 10 installation files...
-	DEL %USERPROFILE%\Downloads\Ninite10.exe
+	DEL %USERPROFILE%\Downloads\Ninite10.exe /silent .
 )
 
 IF "%version%" == "6.3" (
@@ -27,7 +27,7 @@ IF "%version%" == "6.3" (
 	%USERPROFILE%\Downloads\Ninite8.exe
 	ECHO. The Ninite for Windows 8 installation is complete.
 	ECHO. Deleting temporary Ninite for Windows 8 installation files...
-	DEL %USERPROFILE%\Downloads\Ninite8.exe
+	DEL %USERPROFILE%\Downloads\Ninite8.exe /silent .
 )
 
 if "%version%" == "6.2" (
@@ -39,7 +39,7 @@ if "%version%" == "6.2" (
 	%USERPROFILE%\Downloads\Ninite8.exe
 	ECHO. The Ninite for Windows 8 installation is complete.
 	ECHO. Deleting temporary Ninite for Windows 8 installation files...
-	DEL %USERPROFILE%\Downloads\Ninite8.exe
+	DEL %USERPROFILE%\Downloads\Ninite8.exe /silent .
 )
 
 if "%version%" == "6.1" (
@@ -51,7 +51,7 @@ if "%version%" == "6.1" (
 	%USERPROFILE%\Downloads\Ninite7.exe
 	ECHO. The Ninite for Windows 7 installation is complete.
 	ECHO. Deleting temporary Ninite for Windows 7 installation files...
-	DEL %USERPROFILE%\Downloads\Ninite7.exe
+	DEL %USERPROFILE%\Downloads\Ninite7.exe /silent .
 )
 
 GOTO:EOF
