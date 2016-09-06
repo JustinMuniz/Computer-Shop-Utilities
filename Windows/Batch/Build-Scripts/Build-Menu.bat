@@ -4,6 +4,11 @@ SETLOCAL ENABLEDELAYEDEXPANSION
 :: Replace Ninite meta-installers with individual package installers
 :: Verify silent installs, and retry failed installs
 :: Flash and Reader need a installation that works with automated queue
+:: Add options to select all or no menu tasks
+:: Group all non-checkbox menu objects at the top of the list
+:: Use for loop to simplify :reset-menu-options
+:: Add switch to :reset-menu-options to choose X or blank to be filled
+:: Add menu option to select all but the optional tasks
 :: Installers to add?
 ::   Classic Start
 :: Hide menu options not for that version of windows
