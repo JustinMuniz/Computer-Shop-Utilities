@@ -35,7 +35,7 @@ CALL:reset-menu-options
 	CLS
 	ECHO.
 	ECHO.================     Windows System Build Script     ================
-	ECHO.================        (c) 2016 Justin Muniz        ================
+	ECHO.================    (c) 2016 - 2017 Justin Muniz     ================
 	ECHO.
 	ECHO.
 	ECHO.  1.             Build system with selected options
